@@ -8,10 +8,12 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
 import Support from './pages/Support';
+import CookieConsent from './components/CookieConsent';
 
 export default function App() {
   return (
     <Router>
+      <CookieConsent />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
