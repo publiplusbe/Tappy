@@ -45,11 +45,11 @@ jobs:
 
       - name: Verify preview target
         run: |
-          ssh -i ~/.ssh/tappy_deploy tappybe@ssh.tappy.be 'test -d /data/sites/web/tappybe/subsites/preview && test -w /data/sites/web/tappybe/subsites/preview'
+          ssh -i ~/.ssh/tappy_deploy tappybe@ssh.tappy.be 'test -d /data/sites/web/tappybe/subsites/preview.tappy.be && test -w /data/sites/web/tappybe/subsites/preview.tappy.be'
 
       - name: Deploy preview
         run: |
-          rsync -az --delete --exclude='.well-known/'             -e "ssh -i ~/.ssh/tappy_deploy"             dist/ tappybe@ssh.tappy.be:/data/sites/web/tappybe/subsites/preview/
+          rsync -az --delete --exclude='.well-known/'             -e "ssh -i ~/.ssh/tappy_deploy"             dist/ tappybe@ssh.tappy.be:/data/sites/web/tappybe/subsites/preview.tappy.be/
 
       - name: Preview health check
         run: curl -L --fail --retry 5 --retry-delay 3 https://preview.tappy.be/
