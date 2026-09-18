@@ -17,7 +17,7 @@ export default function Pricing() {
       tagline: 'Voor wie eenvoudig wil starten zonder jaarlijkse vaste kost.',
       summary: 'Met Tappy Flex betaal je geen activatiekost en geen jaarlijkse vaste kost. Je betaalt 5% per bestelling. Flex is ideaal voor één event, een tijdelijke actie, eetdag, cadeaubonactie of occasioneel verkoopmoment.',
       priceMain: '€0',
-      priceLabel: 'activatiekost'
+      priceLabel: 'activatiekost',
       commission: '5% per bestelling',
       noSub: 'Geen jaarlijkse kost',
       noActivation: true,
@@ -29,7 +29,7 @@ export default function Pricing() {
         'Automatische bevestiging naar klant',
         'Duidelijk besteloverzicht',
       ],
-      footnote: 'Minimumomzet: €3.000 per jaar per Tappy. Haal je die omzet niet, dan wordt jaarlijks 5% berekend op de minimale omzet van €3.000. Eén Tappy staat voor één event. Wil je meerdere events tegelijk laten lopen, dan heb je meerdere Tappy’s nodig.'
+      footnote: 'Minimumomzet: €3.000 per jaar per Tappy. Haal je die omzet niet, dan wordt jaarlijks 5% berekend op de minimale omzet van €3.000. Eén Tappy staat voor één event. Wil je meerdere events tegelijk laten lopen, dan heb je meerdere Tappy’s nodig.',
       featured: false,
       ctaText: 'Start met Tappy Flex',
       href: '/contact',
@@ -55,7 +55,7 @@ export default function Pricing() {
         'Automatische orderbevestigingen',
         'Ondersteuning voor kleine aanpassingen',
       ],
-      footnote: 'Minimumomzet: €1.500 per jaar per Tappy. Haal je die omzet niet, dan wordt jaarlijks 3% berekend op de minimale omzet van €1.500. Eén Tappy staat voor één event. Meerdere events tegelijk betekent meerdere Tappy’s.'
+      footnote: 'Minimumomzet: €1.500 per jaar per Tappy. Haal je die omzet niet, dan wordt jaarlijks 3% berekend op de minimale omzet van €1.500. Eén Tappy staat voor één event. Meerdere events tegelijk betekent meerdere Tappy’s.',
       featured: true,
       ctaText: 'Kies Tappy Plus',
       href: '/contact',
