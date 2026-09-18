@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, X, ExternalLink, CreditCard } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 
 export default function Layout() {
@@ -17,6 +17,10 @@ export default function Layout() {
   ];
 
   const isActive = (path: string) => location.pathname === path;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
