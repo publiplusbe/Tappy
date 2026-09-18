@@ -15,20 +15,20 @@ export default function Pricing() {
       name: 'Tappy Flex',
       id: 'tier-flex',
       tagline: 'Voor wie eenvoudig wil starten zonder jaarlijkse vaste kost.',
-      summary: 'Met Tappy Flex betaal je een eenmalige activatiekost en daarna enkel wanneer je effectief bestellingen ontvangt. Ideaal voor een tijdelijke actie, een eerste test, een eetdag, een cadeaubonactie of een occasioneel verkoopmoment.',
-      priceMain: '€149',
-      priceLabel: 'eenmalige activatiekost',
+      summary: 'Met Tappy Flex betaal je geen activatiekost en geen jaarlijkse vaste kost. Je betaalt 5% per bestelling. Flex is ideaal voor één event, een tijdelijke actie, eetdag, cadeaubonactie of occasioneel verkoopmoment.',
+      priceMain: '€0',
+      priceLabel: 'activatiekost'
       commission: '5% per bestelling',
-      noSub: 'Geen jaarlijkse abonnementskost',
+      noSub: 'Geen activatiekost · Geen jaarlijkse kost',
       includedTitle: 'Inbegrepen:',
       features: [
         'Eén standaard bestelpagina',
-        'Basisopmaak in jouw stijl',
+        'Voeg ook je eigen logo toe',
         'Online betalingen (Bancontact, Payconiq, etc.)',
         'Automatische bevestiging naar klant',
         'Duidelijk besteloverzicht',
       ],
-      footnote: 'Wanneer een pagina 12 maanden niet gebruikt wordt, pauzeren we deze automatisch. Zo houden we Tappy snel, overzichtelijk en betaalbaar.',
+      footnote: 'Minimumomzet: €3.000 per jaar per Tappy. Haal je die omzet niet, dan wordt jaarlijks 5% berekend op de minimale omzet van €3.000. Eén Tappy staat voor één event. Wil je meerdere events tegelijk laten lopen, dan heb je meerdere Tappy’s nodig.'
       featured: false,
       ctaText: 'Start met Tappy Flex',
       href: '/contact',
@@ -37,20 +37,23 @@ export default function Pricing() {
       name: 'Tappy Plus',
       id: 'tier-plus',
       tagline: 'Voor wie Tappy regelmatig wil gebruiken.',
-      summary: 'Tappy Plus is ideaal voor zaken, verenigingen en organisatoren die doorheen het jaar bestellingen, cadeaubonnen of acties willen beheren via één centraal platform.',
+      summary: 'Tappy Plus is ideaal voor zaken, verenigingen en organisatoren die één event of verkoopmoment uitgebreider in hun eigen branding willen uitwerken, met extra mogelijkheden en add-ons.'
       priceMain: '€75',
       priceLabel: 'per jaar',
       commission: '3% per bestelling',
-      noSub: null,
+      noSub: 'Geen activatiekost',
       includedTitle: 'Inbegrepen:',
       features: [
+        'Alles van Tappy Flex',
+        'Meer brandingmogelijkheden op je landingspagina (op jouw naam in plaats van enkel Tappy)',
+        'Add-ons mogelijk voor gepersonaliseerde mails met jouw logo & branding',
         'Actieve Tappy-pagina het hele jaar door',
         'Duidelijk dashboard met realtime inzichten',
         'Online betalingen via Mollie',
         'Automatische orderbevestigingen',
         'Ondersteuning voor kleine aanpassingen',
       ],
-      footnote: 'Een sterke keuze wanneer je meerdere keren per jaar verkoopt en je administratie eenvoudiger wil maken.',
+      footnote: 'Minimumomzet: €1.500 per jaar per Tappy. Haal je die omzet niet, dan wordt jaarlijks 3% berekend op de minimale omzet van €1.500. Eén Tappy staat voor één event. Meerdere events tegelijk betekent meerdere Tappy’s.'
       featured: true,
       ctaText: 'Kies Tappy Plus',
       href: '/contact',
@@ -71,6 +74,8 @@ export default function Pricing() {
         'Gepersonaliseerde e-mails & cadeaubonnen in eigen stijl',
         'Geavanceerde rapportage & exports',
         'Specifieke automatisaties & integraties',
+        'Eigen domein mogelijk',
+        'Commissie wordt automatisch verrekend',
       ],
       footnote: 'We bekijken samen wat je nodig hebt en bouwen een Tappy-oplossing die past bij jouw organisatie, jouw klanten en jouw manier van werken.',
       featured: false,
@@ -105,7 +110,7 @@ export default function Pricing() {
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-slate-600">
-          Start zonder risico. Geen onderhoudsfees. Kies tussen Flex, Plus of Pro afhankelijk van jouw behoeften.
+          Kies Flex, Plus of Pro volgens jouw event en gewenste mogelijkheden. Eén Tappy staat voor één event. Wil je meerdere events tegelijk organiseren, dan heb je meerdere Tappy’s nodig.
         </p>
         <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 items-stretch">
           {tiers.map((tier) => (
@@ -272,6 +277,10 @@ export default function Pricing() {
                 <li className="flex gap-x-3 items-start">
                   <Check className="h-5 w-5 flex-none text-indigo-600 mt-0.5" />
                   <span>Custom branding en white-label opties</span>
+                </li>
+                <li className="flex gap-x-3 items-start">
+                  <Check className="h-5 w-5 flex-none text-indigo-600 mt-0.5" />
+                  <span>Je eigen domein mogelijk</span>
                 </li>
               </ul>
             </div>
