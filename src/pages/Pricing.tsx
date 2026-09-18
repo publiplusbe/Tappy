@@ -19,7 +19,8 @@ export default function Pricing() {
       priceMain: '€0',
       priceLabel: 'activatiekost'
       commission: '5% per bestelling',
-      noSub: 'Geen activatiekost · Geen jaarlijkse kost',
+      noSub: 'Geen jaarlijkse kost',
+      noActivation: true,
       includedTitle: 'Inbegrepen:',
       features: [
         'Eén standaard bestelpagina',
@@ -41,7 +42,8 @@ export default function Pricing() {
       priceMain: '€75',
       priceLabel: 'per jaar',
       commission: '3% per bestelling',
-      noSub: 'Geen activatiekost',
+      noSub: null,
+      noActivation: true,
       includedTitle: 'Inbegrepen:',
       features: [
         'Alles van Tappy Flex',
@@ -67,6 +69,7 @@ export default function Pricing() {
       priceLabel: 'afgestemd op jouw noden',
       commission: 'Commissie op maat volgens gebruik en volume',
       noSub: null,
+      noActivation: false,
       includedTitle: 'Mogelijkheden & opties:',
       features: [
         'Meerdere verkoopmomenten & afhaallocaties',
@@ -160,6 +163,14 @@ export default function Pricing() {
                   </div>
 
                   <div className="mt-3 flex flex-col gap-1.5">
+                    {tier.noActivation && (
+                      <div className="inline-flex items-center gap-2">
+                        <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" />
+                        <span className={`text-xs font-semibold ${tier.featured ? 'text-emerald-300' : 'text-emerald-700'}`}>
+                          Geen activatiekost
+                        </span>
+                      </div>
+                    )}
                     <div className="inline-flex items-center gap-2">
                       <span className={`inline-block h-2 w-2 rounded-full ${tier.featured ? 'bg-indigo-400' : 'bg-indigo-600'}`} />
                       <span className={`text-sm font-semibold ${tier.featured ? 'text-white' : 'text-slate-900'}`}>
