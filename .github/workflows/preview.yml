@@ -34,6 +34,25 @@ jobs:
       - name: Production build
         run: npm run build
 
+      - name: Protect preview from indexing
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("dist/index.html")
+          html = p.read_text(encoding="utf-8")
+          meta = '<meta name="robots" content="noindex,nofollow,noarchive,nosnippet" />'
+          if meta not in html:
+              html = html.replace("</head>", f"  {meta}\n</head>", 1)
+          p.write_text(html, encoding="utf-8")
+          PY
+          cat >> dist/.htaccess <<'EOF'
+
+          <IfModule mod_headers.c>
+            Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+          </IfModule>
+          EOF
+
       - name: Configure SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.COMBELL_SSH_KEY }}
