@@ -38,7 +38,7 @@ export default function Pricing() {
       name: 'Tappy Plus',
       id: 'tier-plus',
       tagline: 'Voor wie Tappy regelmatig wil gebruiken.',
-      summary: 'Tappy Plus is ideaal voor zaken, verenigingen en organisatoren die één event of verkoopmoment uitgebreider in hun eigen branding willen uitwerken, met extra mogelijkheden en add-ons.'
+      summary: 'Tappy Plus is ideaal voor zaken, verenigingen en organisatoren die één event of verkoopmoment uitgebreider in hun eigen branding willen uitwerken, met extra mogelijkheden en add-ons.',
       priceMain: '€75',
       priceLabel: 'per jaar',
       commission: '3% per bestelling',
