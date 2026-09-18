@@ -1,4 +1,4 @@
-name: Quality Check
+name: Quality Check & Deploy
 
 on:
   pull_request:
@@ -8,6 +8,10 @@ on:
 
 permissions:
   contents: read
+
+concurrency:
+  group: tappy-production
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -39,3 +43,45 @@ jobs:
           path: dist/
           if-no-files-found: error
           retention-days: 14
+
+      - name: Configure SSH
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.COMBELL_SSH_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/tappy_deploy
+          chmod 600 ~/.ssh/tappy_deploy
+          ssh-keyscan -H ssh.tappy.be >> ~/.ssh/known_hosts
+
+      - name: Verify Combell target
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          ssh -i ~/.ssh/tappy_deploy tappybe@ssh.tappy.be 'test -d /data/sites/web/tappybe/www && test -w /data/sites/web/tappybe/www'
+
+      - name: Backup current production
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          ssh -i ~/.ssh/tappy_deploy tappybe@ssh.tappy.be '
+            set -eu
+            mkdir -p /data/sites/web/tappybe/tmp/mee-backups
+            if [ -n "$(find /data/sites/web/tappybe/www -mindepth 1 -maxdepth 1 -print -quit)" ]; then
+              tar -czf "/data/sites/web/tappybe/tmp/mee-backups/tappy-$(date +%Y%m%d-%H%M%S).tar.gz" -C /data/sites/web/tappybe/www .
+            fi
+            ls -1t /data/sites/web/tappybe/tmp/mee-backups/tappy-*.tar.gz 2>/dev/null | tail -n +6 | xargs -r rm -f
+          '
+
+      - name: Deploy to Combell
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          rsync -az --delete             --exclude='.well-known/'             -e "ssh -i ~/.ssh/tappy_deploy"             dist/ tappybe@ssh.tappy.be:/data/sites/web/tappybe/www/
+
+      - name: Live health check
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          for path in / /prijzen /robots.txt /sitemap.xml; do
+            code="$(curl -L --retry 5 --retry-delay 3 --connect-timeout 10 -sS -o /dev/null -w '%{http_code}' "https://tappy.be$path")"
+            echo "$path -> HTTP $code"
+            test "$code" -ge 200
+            test "$code" -lt 400
+          done
