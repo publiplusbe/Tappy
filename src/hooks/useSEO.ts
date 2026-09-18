@@ -10,7 +10,7 @@ interface SEOProps {
 }
 
 const SITE_ORIGIN = 'https://tappy.be';
-const DEFAULT_IMAGE = '/images/tappy-og.png';
+const DEFAULT_IMAGE = '/tappy-og.png';
 
 function upsertMeta(selector: string, attribute: 'name' | 'property', key: string, content: string) {
   let element = document.querySelector<HTMLMetaElement>(selector);
