@@ -210,6 +210,7 @@ export default function Layout() {
                 <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy beleid</Link></li>
                 <li><Link to="/cookies" className="hover:text-white transition-colors">Cookie beleid</Link></li>
                 <li><Link to="/voorwaarden" className="hover:text-white transition-colors">Algemene voorwaarden</Link></li>
+                <li><button type="button" onClick={() => window.dispatchEvent(new Event('tappy:cookie-preferences'))} className="hover:text-white transition-colors text-left">Cookievoorkeuren</button></li>
               </ul>
             </div>
 
