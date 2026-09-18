@@ -66,7 +66,7 @@ export default function Pricing() {
       tagline: 'Voor wie meer nodig heeft dan een standaard bestelpagina.',
       summary: 'Tappy Pro stemmen we af op jouw specifieke werking. Denk aan meerdere verkoopmomenten, verschillende afhaallocaties, uitgebreide productstructuren, gepersonaliseerde e-mails, cadeaubonnen in eigen stijl, extra rapportage of specifieke automatisaties.',
       priceMain: 'Op maat',
-      priceLabel: 'afgestemd op jouw noden',
+      priceLabel: '',
       commission: 'Commissie op maat volgens gebruik en volume',
       noSub: null,
       noActivation: false,
