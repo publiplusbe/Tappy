@@ -154,7 +154,7 @@ export default function Pricing() {
                 {/* Price block */}
                 <div className={`mt-6 pt-6 border-t ${tier.featured ? 'border-slate-800' : 'border-slate-100'}`}>
                   <div className="flex items-baseline gap-x-2">
-                    <span className={`text-4xl font-extrabold tracking-tight ${tier.featured ? 'text-white' : 'text-slate-900'}`}>
+                    <span className={`text-4xl font-extrabold tracking-tight whitespace-nowrap ${tier.featured ? 'text-white' : 'text-slate-900'}`}>
                       {tier.priceMain}
                     </span>
                     <span className={`text-sm font-medium ${tier.featured ? 'text-slate-300' : 'text-slate-500'}`}>
