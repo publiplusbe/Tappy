@@ -14,22 +14,21 @@ export default function Pricing() {
     {
       name: 'Tappy Flex',
       id: 'tier-flex',
-      tagline: 'Voor wie eenvoudig wil starten zonder jaarlijkse vaste kost.',
-      summary: 'Met Tappy Flex betaal je geen activatiekost en geen jaarlijkse vaste kost. Je betaalt 5% per bestelling. Flex is ideaal voor één event, een tijdelijke actie, eetdag, cadeaubonactie of occasioneel verkoopmoment.',
-      priceMain: '€0',
-      priceLabel: 'activatiekost',
-      commission: '5% per bestelling',
-      noSub: 'Geen jaarlijkse kost',
+      tagline: 'Voor één event of actie.',
+      summary: 'Snel online verkopen zonder opstartkost of jaarlijkse kost. Ideaal voor een eetdag, een tijdelijke actie of een eenmalig verkoopmoment.',
+      priceMain: '10%',
+      priceLabel: 'per bestelling',
+      commission: 'Minimum €50 per Tappy',
+      noSub: null,
       noActivation: true,
       includedTitle: 'Inbegrepen:',
       features: [
-        'Eén standaard bestelpagina',
-        'Voeg ook je eigen logo toe',
-        'Online betalingen (Bancontact, Payconiq, etc.)',
-        'Automatische bevestiging naar klant',
+        'Eén bestelpagina',
+        'Online betalen (Bancontact, Payconiq, …)',
+        'Automatische bevestiging naar je klant',
         'Duidelijk besteloverzicht',
       ],
-      footnote: 'Minimumomzet: €3.000 per jaar per Tappy. Haal je die omzet niet, dan wordt jaarlijks 5% berekend op de minimale omzet van €3.000. Eén Tappy staat voor één event. Wil je meerdere events tegelijk laten lopen, dan heb je meerdere Tappy’s nodig.',
+      footnote: 'Blijft de commissie onder €50, dan betaal je enkel dat minimum.',
       featured: false,
       ctaText: 'Start met Tappy Flex',
       href: '/contact',
@@ -37,25 +36,23 @@ export default function Pricing() {
     {
       name: 'Tappy Plus',
       id: 'tier-plus',
-      tagline: 'Voor wie Tappy regelmatig wil gebruiken.',
-      summary: 'Tappy Plus is ideaal voor zaken, verenigingen en organisatoren die één event of verkoopmoment uitgebreider in hun eigen branding willen uitwerken, met extra mogelijkheden en add-ons.',
-      priceMain: '€75',
-      priceLabel: 'per jaar',
-      commission: '3% per bestelling',
+      tagline: 'Voor wie regelmatig verkoopt, onder eigen naam.',
+      summary: 'Je eigen Tappy-omgeving in jouw huisstijl, het hele jaar actief. Ideaal voor zaken, verenigingen en organisatoren.',
+      priceMain: '5%',
+      priceLabel: 'per bestelling',
+      commission: 'Minimum €150 per jaar',
       noSub: null,
       noActivation: true,
       includedTitle: 'Inbegrepen:',
       features: [
         'Alles van Tappy Flex',
-        'Meer brandingmogelijkheden op je landingspagina (op jouw naam in plaats van enkel Tappy)',
-        'Add-ons mogelijk voor gepersonaliseerde mails met jouw logo & branding',
-        'Actieve Tappy-pagina het hele jaar door',
-        'Duidelijk dashboard met realtime inzichten',
-        'Online betalingen via Mollie',
-        'Automatische orderbevestigingen',
-        'Ondersteuning voor kleine aanpassingen',
+        'Je eigen gepersonaliseerde omgeving',
+        'Meerdere pagina’s binnen één Tappy',
+        'QR-scans voor opvolging van betaling en validatie',
+        'Dashboard met realtime inzichten',
+        'Het hele jaar actief',
       ],
-      footnote: 'Minimumomzet: €1.500 per jaar per Tappy. Haal je die omzet niet, dan wordt jaarlijks 3% berekend op de minimale omzet van €1.500. Eén Tappy staat voor één event. Meerdere events tegelijk betekent meerdere Tappy’s.',
+      footnote: 'Blijft de commissie onder €150 per jaar, dan betaal je enkel dat minimum.',
       featured: true,
       ctaText: 'Kies Tappy Plus',
       href: '/contact',
@@ -113,7 +110,7 @@ export default function Pricing() {
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-slate-600">
-          Kies Flex, Plus of Pro volgens jouw event en gewenste mogelijkheden. Eén Tappy staat voor één event. Wil je meerdere events tegelijk organiseren, dan heb je meerdere Tappy’s nodig.
+          Je betaalt pas als je verkoopt. Geen opstartkost, geen verrassingen.
         </p>
         <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 items-stretch">
           {tiers.map((tier) => (
@@ -167,7 +164,7 @@ export default function Pricing() {
                       <div className="inline-flex items-center gap-2">
                         <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" />
                         <span className={`text-xs font-semibold ${tier.featured ? 'text-emerald-300' : 'text-emerald-700'}`}>
-                          Geen activatiekost
+                          Geen opstartkost
                         </span>
                       </div>
                     )}
