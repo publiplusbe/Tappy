@@ -64,7 +64,7 @@ export default function Pricing() {
       priceMain: 'Op maat',
       priceLabel: '',
       commission: 'Commissie op maat',
-      noSub: null,
+      noSub: 'Vrijblijvend gesprek',
       noActivation: false,
       includedTitle: 'Mogelijkheden & opties:',
       features: [
@@ -143,7 +143,7 @@ export default function Pricing() {
                   {tier.tagline}
                 </p>
 
-                <p className={`mt-4 text-sm leading-relaxed ${tier.featured ? 'text-slate-300' : 'text-slate-600'}`}>
+                <p className={`mt-4 text-sm leading-relaxed lg:min-h-[4.5rem] ${tier.featured ? 'text-slate-300' : 'text-slate-600'}`}>
                   {tier.summary}
                 </p>
 
