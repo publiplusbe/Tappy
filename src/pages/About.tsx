@@ -23,7 +23,7 @@ export default function About() {
     },
     {
       name: 'Enkel betalen voor wat besteld is',
-      description: 'Bij onze Flex formule betaal je enkel een klein percentage op effectieve bestellingen. Geen verkoop = geen kosten.',
+      description: 'Geen opstartkost: je betaalt een percentage op effectieve bestellingen, met een klein minimum.',
       icon: Receipt,
     },
     {

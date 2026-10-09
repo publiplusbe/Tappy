@@ -42,7 +42,7 @@ export default function Support() {
     },
     {
       question: 'Zijn er verborgen kosten of onverwachte kosten?',
-      answer: 'Nee, onze prijzen zijn 100% transparant. Je kiest tussen Flex (€149 eenmalige activatiekost + 5% per bestelling, zonder jaarlijkse vaste kost), Plus (€75/jaar + 3% per bestelling) of Pro (op maat). Geen verborgen abonnementskosten of verrassingen achteraf.',
+      answer: 'Nee, onze prijzen zijn 100% transparant. Je kiest tussen Flex (10% per bestelling), Plus (5% per bestelling) of Pro (op maat). Geen opstartkost bij Flex en Plus. De minimumomzet per formule staat duidelijk op de prijzenpagina. Geen verborgen abonnementskosten of verrassingen achteraf.',
     },
     {
       question: 'Hebben mijn klanten een account nodig om te bestellen?',
