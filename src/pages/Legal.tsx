@@ -83,7 +83,7 @@ De klant staat in voor correcte account- en bedrijfsgegevens, het vertrouwelijk 
 De organisator of verkoper die via Tappy producten, diensten, tickets, cadeaubonnen of andere aanbiedingen verkoopt, blijft verantwoordelijk voor zijn aanbod, prijzen, productinformatie, wettelijke informatieplichten, uitvoering, levering of afhaling, retour- en consumentenverplichtingen en communicatie met zijn eigen klanten.
 
 5. Prijzen en formules
-De actuele prijzen en kenmerken van Tappy Flex, Tappy Plus en Tappy Pro staan op de prijzenpagina of in een individuele offerte. Tappy Flex en Tappy Plus omvatten een commissie per bestelling met een minimumbedrag, zonder opstartkost. Tappy Plus heeft een lagere commissie en een jaarlijks minimum. Tappy Pro wordt op maat bepaald. Bij tegenstrijdigheid tussen algemene website-informatie en een individueel aanvaarde offerte of overeenkomst, heeft die individuele afspraak voorrang.
+De actuele prijzen en kenmerken van Tappy Flex, Tappy Plus en Tappy Pro staan op de prijzenpagina of in een individuele offerte. Tappy Flex en Tappy Plus omvatten een commissie per bestelling, zonder opstartkost, met een minimumomzet zoals vermeld op de prijzenpagina. Tappy Plus heeft een lagere commissie. Tappy Pro wordt op maat bepaald. Bij tegenstrijdigheid tussen algemene website-informatie en een individueel aanvaarde offerte of overeenkomst, heeft die individuele afspraak voorrang.
 
 6. Betalingen
 Online betalingen kunnen via een externe betaalprovider zoals Mollie verlopen. De organisator of verkoper koppelt daarvoor zijn eigen betaalaccount waar van toepassing. Kosten en voorwaarden van de betaalprovider kunnen afzonderlijk van de Tappy-kosten gelden. Tappy is geen bank en houdt klantgelden niet als eigen betaalinstelling aan.
