@@ -60,7 +60,7 @@ export function TappyIcon({ size = 36 }: { size?: number }) {
 
 export default function TappyLogo({
   size = 36,
-  tekstClassName = 'text-slate-900',
+  tekstClassName = 'text-indigo-600',
 }: {
   size?: number;
   tekstClassName?: string;
