@@ -2,6 +2,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, X, ExternalLink, CreditCard } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import TappyLogo from './TappyLogo';
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,24 +26,8 @@ export default function Layout() {
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
           <div className="flex w-full items-center justify-between py-4">
             <div className="flex items-center">
-              <Link to="/" className="flex items-center gap-2">
-                <motion.div 
-                  animate={{ 
-                    rotate: [0, -10, 10, -10, 10, 0, 0, 0, 0, 0],
-                    scale: [1, 1.1, 1.1, 1.1, 1.1, 1, 1, 1, 1, 1]
-                  }}
-                  transition={{ 
-                    repeat: Infinity, 
-                    duration: 4, 
-                    ease: "easeInOut" 
-                  }}
-                  className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white"
-                >
-                  <span className="text-xl font-bold">T</span>
-                </motion.div>
-                <span className="text-2xl font-bold tracking-tight text-slate-900">
-                  Tappy
-                </span>
+              <Link to="/" className="flex items-center" aria-label="Tappy, naar de homepagina">
+                <TappyLogo />
               </Link>
             </div>
             <div className="hidden lg:flex ml-10 space-x-8 items-center">
@@ -164,9 +149,9 @@ export default function Layout() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
             <div className="sm:col-span-2">
-              <span className="text-2xl font-bold tracking-tight text-white mb-4 block">
-                Tappy
-              </span>
+              <Link to="/" className="mb-4 inline-flex" aria-label="Tappy, naar de homepagina">
+                <TappyLogo tekstClassName="text-white" />
+              </Link>
               <p className="text-sm text-slate-400 mb-6 max-w-xs">
                 Eenvoudig online bestellen voor verenigingen, starters en KMO's.
               </p>

@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+/* Woordmerk "Tappy": Cherry Bomb One (OFL), zelf gehost, enkel de letters T a p y */
+@font-face {
+  font-family: "Cherry Bomb One";
+  src: url("/fonts/cherry-bomb-one-tappy.woff2") format("woff2");
+  font-display: swap;
+}
+
+@theme {
+  --font-logo: "Cherry Bomb One", "Arial Rounded MT Bold", ui-rounded, sans-serif;
+}
